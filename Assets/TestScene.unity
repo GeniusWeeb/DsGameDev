@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 921950144}
   - component: {fileID: 921950145}
   m_Layer: 0
-  m_Name: LinkedListManager
+  m_Name: LinkedListMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
