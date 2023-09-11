@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class LinkedList<T> 
 {
-    public Node head;
-    public int currentSize;
+    private Node head;
+    private Node tail;
+    public int currentSize {    get ; private set; } 
 
 
     public LinkedList()
     {
         this.head = null;
+        this.tail = null;
         currentSize = 0;
         
     }
@@ -20,11 +22,41 @@ public class LinkedList<T>
     { 
         var node =  new  Node(data);
 
-        node.next = this.head;
-        this.head = node;
+        if (head == null) // empty list
+        {
+            head = tail = node;
+        }
+        else
+        {
+            node.next = this.head;
+            this.head = node;
+        }
         currentSize++;
         
+    }
         
+    
+    //Make use of tail
+    public void AddNodeAtEnd(T data)
+    {
+        var node = new Node(data);
+
+        if (head == null)
+        {
+            Debug.LogError("List is empty. now adding new element");
+            head = tail = node;
+        }
+        else
+        {   
+            Debug.LogError("Elemt exist in the node");
+             // node.next = tail; -> basically means that node.next -> null , since tail is null
+            this. tail.next = node;
+             tail = node;
+        }
+
+        currentSize++;
+      
+
     }
 
     public List<Node> ShowNodes()
@@ -32,6 +64,7 @@ public class LinkedList<T>
 
         List<Node> goList = new List<Node>();
         Debug.LogError("Head is " +  this.head.data);
+        Debug.LogError("Tail is " + this.tail.data);
         Node current = this.head;
         while (current != null)
         {
@@ -44,6 +77,7 @@ public class LinkedList<T>
 
 }
 
+    
 
 
     public class Node
