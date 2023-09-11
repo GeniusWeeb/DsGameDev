@@ -98,6 +98,10 @@ public class LinkedList<T>
         return tmpNode;
 
     }
+    
+    
+    // TODO  : This is not working as intended to  . 
+    // Need to fix this with the proper format .
 
     public Node RemoveLastNode()
     {

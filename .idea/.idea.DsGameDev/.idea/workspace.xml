@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e9638607-94ca-4fe6-bea8-be35076a5b6b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DsGameDev/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DsGameDev/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LinkedList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LinkedList.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RunLinkedList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RunLinkedList.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-public class RunLinkedList : MonoBehaviour  
-{
+public class RunLinkedList : MonoBehaviour , IComparable
+ {
     
     private LinkedList<int> list;
 
@@ -75,10 +75,16 @@ public class RunLinkedList : MonoBehaviour
             {
                 Destroy(item.gameObject);
             }
+
+          
         }
 
 
-  }
+        public int CompareTo(object obj)
+        {
+            throw new NotImplementedException();
+        }
+ }
 
 
 
