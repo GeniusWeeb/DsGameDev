@@ -34,7 +34,6 @@ public class LinkedList<T>
         currentSize++;
         
     }
-        
     
     //Make use of tail
     public void AddNodeAtEnd(T data)
@@ -77,7 +76,51 @@ public class LinkedList<T>
 
 }
 
-    
+    public  Node RemoveFirstNode()
+    {
+        if (head == null)
+            return  null ;
+
+
+        var tmpNode = head; 
+        
+        if (head == tail) //1 element only
+        {
+            head = tail = null;
+         
+        }
+        else
+        {
+            head = head.next;
+           
+        }
+        currentSize--;
+        return tmpNode;
+
+    }
+
+    public Node RemoveLastNode()
+    {
+        if (head == null)
+            return null ;
+        if (head == tail)
+            RemoveFirstNode();
+        
+        
+        Node current = head;
+        Node previous = null;
+
+        while (current != tail)
+        {
+            current = current.next;
+            previous = current ;
+        }
+
+        previous.next = null;
+        tail = previous;
+        currentSize--;
+        return current;
+    }
 
 
     public class Node

@@ -33,9 +33,27 @@ public class RunLinkedList : MonoBehaviour
         [ContextMenu("Add Node at the end")]
         public void AddNodeAtTheEnd()
         {
-            list.AddNodeAtEnd(data);
+              list.AddNodeAtEnd(data);
+            
         }
 
+
+        
+        
+        public void RemoveFirst()
+        {
+          var removedNode =  list.RemoveFirstNode();
+          Debug.LogError("Removed Node" + removedNode.data);
+
+        }
+
+
+        public void RemoveLast()
+        {
+          var removedNode =   list.RemoveLastNode();
+          Debug.LogError("Removed Node" + removedNode.data);
+
+        }
 
         [ContextMenu("Show the nodes")]
         public void ShowAllNodes()
